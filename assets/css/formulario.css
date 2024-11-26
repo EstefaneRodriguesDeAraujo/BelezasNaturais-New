@@ -1,0 +1,328 @@
+/* Resetando a formatação básica de todos os elementos */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sumário do CSS:
+A - Início da navbar
+B - Início do conteúdo das páginas
+C - Configurações da home
+D - Início das configurações da página de conteúdo: paisagens, curiosidades, etc
+*/
+
+/* A - Início da navbar */
+
+/* Flex para organizar o conteúdo verticalmente */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilo da navbar */
+.navbar ul {
+    font-size: 16px;
+    background-image: linear-gradient(8deg, #1c0106, #8f0b13);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    font-weight: 600;
+}
+
+ul {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.logo {
+    max-width: 80px;
+    float: left;
+    margin: 30px 60px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 50px;
+}
+
+.navbar li {
+    float: left;
+    margin-top: 50px;
+}
+
+.navbar a:hover {
+    color: #ffcab4;
+    transition: all 0.3s ease;
+}
+
+/* Fim da navbar */
+
+/* B - Início do conteúdo das páginas */
+
+/* Cor de fundo das páginas */
+body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-image: url(/assets/images/montain-gray.jpeg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* Inicio do formulário */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; /* Adiciona um pequeno espaço entre o título e o formulário */
+}
+
+/* Estilo do formulário */
+form {
+    width: 80%;
+    max-width: 600px; /* Limita o tamanho máximo do formulário */
+    background-color: #4c4f54;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 10px;
+    color: #fbebd8;
+    margin-top: 20px;
+}
+
+/* Campo de entrada do formulário */
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    outline: none;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Estilo do botão de envio */
+form button[type="submit"] {
+    background-color: #94272e;
+    color: #fbebd8;
+    padding: 15px 10px;
+    border: none;
+    margin-top: 16px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button[type="submit"]:hover {
+    background-color: #96383e;
+}
+
+/* Validação de campos obrigatórios */
+.span-required {
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 5px;
+    display: none;
+}
+
+/* Flex 1 para conteúdo ocupar espaço restante */
+.content {
+    flex: 1;
+    padding: 20px;
+    margin: 0 auto;
+}
+/*fim do formulário*/
+
+/* Título h1 */
+h1 {
+    font-size: 35px; /* Tamanho fixo para o título */
+    margin-top: 50px;
+    margin-bottom: 25px;
+    color: #4d000f;
+    max-width: 100%; /* Evita que o título se estique */
+    white-space: nowrap; /* Impede quebra de linha no título */
+}
+
+/* Alinhamento do conteúdo da página */
+.alinhamento {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+/* Estilo dos botões */
+.botoes {
+    background-color: #e22227;
+    border: none;
+    width: 260px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 3px 10px #4d000f;
+}
+
+.botoes:hover,
+.botoes:focus,
+.botoes:active {
+    box-shadow: 0px 10px 20px #4d000f;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    color: #fbebd8;
+    transition: all 0.3s ease;
+}
+
+/* D - Início das configurações de página de conteúdo: paisagens, curiosidades, etc */
+
+.linha {
+    display: flex;
+}
+
+.coluna {
+    flex: 50%;
+}
+
+.conteudoPaginas {
+    font-size: 20px;
+    background-color: #efdfc5;
+    box-shadow: 0px 5px 10px gray;
+    border-radius: 15px;
+    padding: 50px;
+    width: 840px;
+    margin-bottom: 80px;
+}
+
+.conteudoPaginas img {
+    border-radius: 20px;
+    box-shadow: 5px 10px 8px gray;
+    margin: 10px auto;
+    margin-top: 50px;
+    display: block;
+    height: auto;
+}
+
+.fulano {
+    display: block;
+    text-align: center;
+    font-size: 10px;
+    margin-bottom: 50px;
+}
+
+.menuAcessoRapido {
+    font-size: 20px;
+    background-color: #efdfc5;
+    box-shadow: 0px 5px 10px gray;
+    border-radius: 5px;
+    padding: 30px;
+    margin-left: 90px;
+    width: fit-content;
+    position: sticky;
+    top: 0;
+}
+
+/* Início do footer */
+
+/* Espaço interno do footer */
+.footer {
+    padding-top: 70px;
+}
+
+/* Estilo do footer */
+.footerContainer {
+    background-image: linear-gradient(8deg, #8f0b13, #100104);
+    color: white;
+    padding: 30px 0px;
+    margin: auto;
+}
+
+/* Links no footer */
+.footerContainer a {
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.footerColuna a:hover {
+    color: #ffcab4;
+}
+
+/* Disposição das colunas no footer */
+.footerRaia {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footerColuna {
+    width: 350px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.footerColuna h3 {
+    font-size: 18px;
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footerColuna h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #f6323c;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+/* Estilo dos itens do footer */
+.footerColuna ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footerColuna ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footerColuna ul li a:hover {
+    color: #ffcab4;
+    padding-left: 10px;
+}
+
+/* Barra de rodapé com os nomes */
+.footerBottom {
+    padding-top: 30px;
+    text-align: center;
+}
+
+.feitoPor {
+    font-weight: bold;
+}
