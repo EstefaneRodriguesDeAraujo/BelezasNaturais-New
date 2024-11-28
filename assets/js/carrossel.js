@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const slides = document.querySelector('.slides');
   const dots = document.querySelectorAll('.dot');
